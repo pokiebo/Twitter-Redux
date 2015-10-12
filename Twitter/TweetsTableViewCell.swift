@@ -66,7 +66,7 @@ class TweetsTableViewCell: UITableViewCell {
         
         
         navigationController?.presentViewController(ProfViewController, animated: true, completion: nil)*/
-        
+        print("here")
         delegate?.showProfile1(self)
         
     }
