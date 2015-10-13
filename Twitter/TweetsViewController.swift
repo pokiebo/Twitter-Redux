@@ -110,6 +110,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = self.tableView.dequeueReusableCellWithIdentifier("tweetsCell", forIndexPath: indexPath) as! TweetsTableViewCell
         
             cell.tweet = self.tweets?[indexPath.row]
+            cell.delegate = self
             return cell
     }
     
@@ -151,14 +152,13 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }*/
     
     func showProfile1(cell: TweetsTableViewCell) {
-        print("here2")
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ProfViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
         ProfViewController.user = cell.tweet!.user
         ProfViewController.viewWillAppear(true)
         
         
-        navigationController?.presentViewController(ProfViewController, animated: true, completion: nil)
+        self.navigationController?.presentViewController(ProfViewController, animated: false, completion: nil)
     }
 
    

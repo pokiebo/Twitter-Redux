@@ -26,6 +26,7 @@ class TweetsTableViewCell: UITableViewCell {
     var delegate: TweetsTableViewCellDelegate?
     var id: Int?
     
+   
     
     var tweet: Tweet? {
         willSet(value) {
@@ -53,6 +54,7 @@ class TweetsTableViewCell: UITableViewCell {
         tapGesture.numberOfTapsRequired = 1
         profileImageView.userInteractionEnabled = true
         profileImageView.addGestureRecognizer(tapGesture)
+        
         
         // Initialization code
     }
